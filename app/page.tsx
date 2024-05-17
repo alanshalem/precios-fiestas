@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -12,21 +13,30 @@ export default function Home() {
       { name: "AGUA", price: "2000" },
       { name: "SPEED XL", price: "3000" },
     ],
-    CERVEZAS: [
-      { name: "LATA BRAHMA", price: "3000" },
-      { name: "CERVEZA STELLA (750cc)", price: "5000" },
-    ],
+    CERVEZAS: [{ name: "LATA BRAHMA", price: "3000" }],
     TRAGOS: [
       { name: "FERNET BRANCA", price: "4000" },
       { name: "VODKA CON SPEED", price: "4000" },
       { name: "GIN GORDON", price: "4000" },
-      { name: "JAGGER", price: "7000" },
+      { name: "DEMONJAG", price: "6000" },
     ],
     COMBOS: [
-      { name: "BOTELLA DE VODKA + 4 SPEED", price: "10000" },
-      { name: "BOTELLA DE GIN + 3 TONICAS", price: "12000" },
+      { name: "GORDONS + 1 BOTELLA TONICA", price: "30000" },
+      { name: "SMIRNOFF + 2 SPEED XL ", price: "25000" },
     ],
   };
+
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText("sintetic")
+      .then(() => {
+        alert("Texto copiado al portapapeles: sintetic");
+      })
+      .catch((err) => {
+        console.error("Error al copiar el texto: ", err);
+      });
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between ">
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
@@ -44,6 +54,12 @@ export default function Home() {
             height={150}
           />
           <h1 className="text-4xl font-bold">LISTA DE PRECIOS</h1>
+          <button
+            onClick={copyToClipboard}
+            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          >
+            Copiar alias (sintetic)
+          </button>
           <div className="mt-8">
             {Object.keys(categories).map((category, index) => (
               <div key={index} className="mt-8">
