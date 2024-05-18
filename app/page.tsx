@@ -20,6 +20,8 @@ export default function Home() {
       { name: "VODKA CON SPEED", price: "4000" },
       { name: "GIN GORDON", price: "4000" },
       { name: "DEMONJAG", price: "6000" },
+      { name: "JAGGERMEISTER", price: "7000" },
+      { name: "RED LABEL CON SPEED", price: "8000" },
     ],
     COMBOS: [
       { name: "GORDONS + 1 BOTELLA TONICA", price: "30000" },
