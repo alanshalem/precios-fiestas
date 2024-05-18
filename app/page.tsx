@@ -1,6 +1,7 @@
 "use client";
 import Head from "next/head";
 import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Home() {
   interface CategoryItems {
@@ -30,10 +31,10 @@ export default function Home() {
     navigator.clipboard
       .writeText("sintetic")
       .then(() => {
-        alert("Texto copiado al portapapeles: sintetic");
+        toast.success("ALIAS COPIADO");
       })
       .catch((err) => {
-        console.error("Error al copiar el texto: ", err);
+        toast.error("ERROR AL COPIAR: " + err);
       });
   };
 
@@ -58,8 +59,10 @@ export default function Home() {
             onClick={copyToClipboard}
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
           >
-            Copiar alias (sintetic)
+            COPIAR ALIAS
           </button>
+          <h3 className="mt-4 text-lg font-bold">ALIAS: sintetic</h3>
+          <h4>COPIA EL ALIAS Y ABRE LA APLICACION DE MERCADOPAGO</h4>
           <div className="mt-8">
             {Object.keys(categories).map((category, index) => (
               <div key={index} className="mt-8">
@@ -78,6 +81,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Toaster />
     </main>
   );
 }
