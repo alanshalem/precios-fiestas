@@ -79,8 +79,8 @@ export default function Home() {
                     key={idx}
                     className="flex justify-between w-full max-w-md mx-auto my-1"
                   >
-                    <span className="text-left">{item.name}</span>
-                    <span className="text-right">{item.price}</span>
+                    <span className="text-left ml-4">{item.name}</span>
+                    <span className="text-right mr-4">{item.price}</span>
                   </div>
                 ))}
               </div>
