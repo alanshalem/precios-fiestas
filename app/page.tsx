@@ -24,8 +24,10 @@ export default function Home() {
       { name: "RED LABEL CON SPEED", price: "8000" },
     ],
     COMBOS: [
-      { name: "GORDONS + 1 BOTELLA TONICA", price: "30000" },
+      { name: "CHANDON DELICE + SPEED XL", price: "23000" },
       { name: "SMIRNOFF + 2 SPEED XL ", price: "25000" },
+      { name: "BARON B + SPEED XL", price: "30000" },
+      { name: "GORDONS + 1 BOTELLA TONICA", price: "30000" },
     ],
   };
 
