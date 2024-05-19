@@ -14,7 +14,10 @@ export default function Home() {
       { name: "AGUA", price: "2000" },
       { name: "SPEED XL", price: "3000" },
     ],
-    CERVEZAS: [{ name: "LATA BRAHMA", price: "3000" }],
+    CERVEZAS: [
+      { name: "LATA BRAHMA", price: "3000" },
+      { name: "CERVEZA CORONA", price: "5000" },
+    ],
     TRAGOS: [
       { name: "FERNET BRANCA", price: "4000" },
       { name: "VODKA CON SPEED", price: "4000" },
